@@ -1,4 +1,4 @@
-#Modded to work with Kraken, change simboles to supported ones
+#Modded to work with Kraken, change simboles to supported ones,relaxed to be used by everyone
 
 import time
 
@@ -154,12 +154,12 @@ def resolve_ema_signal(state, data):
 
 ################################################# INTERVALS 1TIK ############################################################
 
-@schedule(interval= "1m", symbol=SYMBOLS, window_size=150)
+@schedule(interval= "1h", symbol=SYMBOLS, window_size=150)
 def handler(state, dataMap):
     for symbol, data in dataMap.items():
         resolve_ema_signal(state, data)
 
-@schedule(interval= "1m", symbol=SYMBOLS2, window_size=150)
+@schedule(interval= "1h", symbol=SYMBOLS2, window_size=150)
 def handler2(state, dataMap):
     for symbol, data in dataMap.items():
         resolve_ema_signal(state, data)
