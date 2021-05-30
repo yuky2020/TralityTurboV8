@@ -1,17 +1,17 @@
-#Updated 21/05
+#Modded to work with Kraken, change simboles to supported ones
 
 import time
 
 def initialize(state):
     state.signals = {}
-    state.cooler = {'LTCUSDT' : 0, 'ADAUSDT' : 0 , 'DASHUSDT' : 0, 'LINKUSDT' : 0, 'FIOUSDT' : 0, 'VETUSDT' : 0 , 'BNBUSDT' : 0, 'ETHUSDT' : 0, 'DOTUSDT' : 0, 'NEOUSDT' : 0,'TRXUSDT': 0}
-    state.buyer = {'LTCUSDT' : 0, 'ADAUSDT' : 0 , 'DASHUSDT' : 0, 'LINKUSDT' : 0, 'FIOUSDT' : 0, 'VETUSDT' : 0 , 'BNBUSDT' : 0, 'ETHUSDT' : 0, 'DOTUSDT' : 0, 'NEOUSDT' :0,'TRXUSDT': 0}
-    state.tp_newposition =  {'LTCUSDT' : False, 'ADAUSDT' : False, 'DASHUSDT' : False, 'LINKUSDT' : False, 'FIOUSDT' : False, 'VETUSDT' : False , 'BNBUSDT' : False, 'ETHUSDT' : False, 'DOTUSDT' : False, 'NEOUSDT' : False, 'TRXUSDT':False}
-    state.tp_position =  {'LTCUSDT' : 0, 'ADAUSDT' : 0 , 'DASHUSDT' : 0, 'LINKUSDT' : 0, 'FIOUSDT' : 0, 'VETUSDT' : 0 , 'BNBUSDT' : 0, 'ETHUSDT' : 0, 'DOTUSDT' : 0, 'NEOUSDT' : 0,'TRXUSDT': 0}
+    state.cooler = {'LTCUSDT' : 0, 'ADAUSDT' : 0 , 'EOSUSDT' : 0, 'LINKUSDT' : 0, 'FIOUSDT' : 0, 'XDGUSDT' : 0 , 'XRPUSDT' : 0, 'ETHUSDT' : 0, 'DOTUSDT' : 0, 'ADAUSDT' : 0,'TRXUSDT': 0}
+    state.buyer = {'LTCUSDT' : 0, 'ADAUSDT' : 0 , 'EOSUSDT' : 0, 'LINKUSDT' : 0, 'FIOUSDT' : 0, 'XDGUSDT' : 0 , 'XRPUSDT' : 0, 'ETHUSDT' : 0, 'DOTUSDT' : 0, 'ADAUSDT' :0,'TRXUSDT': 0}
+    state.tp_newposition =  {'LTCUSDT' : False, 'ADAUSDT' : False, 'EOSUSDT' : False, 'LINKUSDT' : False, 'FIOUSDT' : False, 'XDGUSDT' : False , 'XRPUSDT' : False, 'ETHUSDT' : False, 'DOTUSDT' : False, 'ADAUSDT' : False, 'TRXUSDT':False}
+    state.tp_position =  {'LTCUSDT' : 0, 'ADAUSDT' : 0 , 'EOSUSDT' : 0, 'LINKUSDT' : 0, 'FIOUSDT' : 0, 'XDGUSDT' : 0 , 'XRPUSDT' : 0, 'ETHUSDT' : 0, 'DOTUSDT' : 0, 'ADAUSDT' : 0,'TRXUSDT': 0}
     state.signal_parameters = [22, 14, 30, 14, 9]
     
-SYMBOLS = ["VETUSDT", "BNBUSDT",  "DOTUSDT", "NEOUSDT"]
-SYMBOLS2 = ["DASHUSDT","LTCUSDT","TRXUSDT"]
+SYMBOLS = ["XDGUSDT", "XRPUSDT",  "DOTUSDT", "ADAUSDT"]
+SYMBOLS2 = ["EOSUSDT","LTCUSDT","LINKUSDT"]
 
 SIGNAL_BUY = 1
 SIGNAL_SELL = 2
