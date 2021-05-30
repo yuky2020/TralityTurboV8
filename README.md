@@ -1,5 +1,4 @@
-**Built to use with Trality 1 Minute Interval for Daily Trading.**
-
+**Built to use with Trality 1H Interval for Daily Trading with the free version. Forked to make it compatible with kraken assets **
 
 Features:
 1. Dynamic Take Profit
